@@ -12,6 +12,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
 const theme = createTheme();
 
@@ -50,25 +51,44 @@ export default function Register() {
             sx={{ mt: 3 }}
           >
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12} sm={12}>
                 <TextField
-                  autoComplete="given-name"
-                  name="firstName"
+                  name="userName"
                   required
                   fullWidth
-                  id="firstName"
-                  label="First Name"
+                  id="userName"
+                  label="Username"
                   autoFocus
                 />
               </Grid>
-              <Grid item xs={12} sm={6}>
+              <Grid item xs={12}>
                 <TextField
                   required
                   fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
+                  name="password"
+                  label="Password"
+                  type="password"
+                  id="password"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  name="passwordConfirm"
+                  label="Password Confirm"
+                  type="password"
+                  id="passwordConfirm"
+                />
+              </Grid>
+              <Grid item xs={12} sm={12}>
+                <TextField
+                  name="name"
+                  required
+                  fullWidth
+                  id="name"
+                  label="Name"
+                  autoFocus
                 />
               </Grid>
               <Grid item xs={12}>
@@ -85,20 +105,22 @@ export default function Register() {
                 <TextField
                   required
                   fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="new-password"
+                  id="phoneNumber"
+                  label="Phone Number"
+                  name="phoneNumber"
                 />
               </Grid>
               <Grid item xs={12}>
-                <FormControlLabel
-                  control={
-                    <Checkbox value="allowExtraEmails" color="primary" />
-                  }
-                  label="I want to receive inspiration, marketing promotions and updates via email."
-                />
+                <FormControl fullWidth>
+                  <Select
+                    value={20}
+                    onChange={() => console.log("Nothing")}
+                    displayEmpty
+                  >
+                    <MenuItem value={20}>User</MenuItem>
+                    <MenuItem value={30}>Account</MenuItem>
+                  </Select>
+                </FormControl>
               </Grid>
             </Grid>
             <Button

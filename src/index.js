@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.scss";
+import "./index.css";
 import Home from "./pages/Home/Home";
 import {
   unstable_HistoryRouter as HistoryRouter,
@@ -13,6 +13,7 @@ import { store } from "./redux/configStore";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import HomeTemplate from "./templates/HomeTemplate";
+import { LoginTemplate } from "./templates/LoginTemplate";
 export const history = createBrowserHistory();
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -22,6 +23,8 @@ root.render(
       <Routes>
         <Route path="" element={<HomeTemplate />}>
           <Route path="" element={<Home />} />
+        </Route>
+        <Route path="" element={<LoginTemplate />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
         </Route>

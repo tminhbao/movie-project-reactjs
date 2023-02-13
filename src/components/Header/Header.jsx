@@ -1,17 +1,23 @@
-import { LogoDev } from "@mui/icons-material";
-import { Container, TextField } from "@mui/material";
+import { Avatar, Grid, TextField } from "@mui/material";
 import React from "react";
 
 const Header = () => {
   return (
-    <Container maxWidth="fluid">
-      <LogoDev />
-      <TextField
-        id="outlined-search"
-        label="Nhập tên diễn viên, phim, ..."
-        type="search"
-      />
-    </Container>
+    <Grid container sx={{ alignItems: "center" }}>
+      <Grid item xs={2}>
+        <p>Logo is here</p>
+      </Grid>
+      <Grid item xs={7}>
+        <TextField
+          id="outlined-search"
+          label="Nhập tên diễn viên, phim, ..."
+          type="search"
+        />
+      </Grid>
+      <Grid item xs={3}>
+        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+      </Grid>
+    </Grid>
   );
 };
 

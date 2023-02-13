@@ -12,6 +12,8 @@ import Grid from "@mui/material/Grid";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { useFormik } from "formik";
+import * as yup from "yup";
 
 const theme = createTheme();
 
@@ -24,6 +26,20 @@ export default function Login() {
       password: data.get("password"),
     });
   };
+
+  const form = useFormik({
+    initialValues: {
+      username: "",
+      password: "",
+    },
+    validationSchema: yup.object().shape({
+      username: yup.string("Username must be required"),
+      password: yup.string("Password must be required"),
+    }),
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
 
   return (
     <ThemeProvider theme={theme}>
@@ -64,18 +80,20 @@ export default function Login() {
             <Box
               component="form"
               noValidate
-              onSubmit={handleSubmit}
+              onSubmit={form.handleSubmit}
               sx={{ mt: 1 }}
             >
               <TextField
                 margin="normal"
                 required
                 fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
+                id="username"
+                label="Username"
+                name="username"
+                autoComplete="username"
                 autoFocus
+                onChange={form.handleChange}
+                onBlur={form.handleBlur}
               />
               <TextField
                 margin="normal"
@@ -85,7 +103,8 @@ export default function Login() {
                 label="Password"
                 type="password"
                 id="password"
-                autoComplete="current-password"
+                onChange={form.handleChange}
+                onBlur={form.handleBlur}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}
