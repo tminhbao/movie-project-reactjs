@@ -1,0 +1,30 @@
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #f47f1f !important;
+}
+
+.ant-tabs-ink-bar {
+  position: absolute;
+  background: #f47f1f !important;
+}
+
+.ant-input:focus {
+  border-color: #57a8e9;
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 2px rgba(87, 168, 233, 0.2);
+  box-shadow: 0 0 0 2px rgba(87, 168, 233, 0.2);
+}
+
+.ant-select-selection {
+  background-color: transparent;
+}
+
+.ant-menu-submenu-title:hover {
+  color: #f47f1f;
+}
+
+.ant-menu-submenu-title:hover {
+  .ant-menu-submenu-arrow::before,
+  .ant-menu-submenu-arrow::after {
+    background: red !important;
+  }
+}
