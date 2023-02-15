@@ -18,13 +18,26 @@
   background-color: transparent;
 }
 
-.ant-menu-submenu-title:hover {
-  color: #f47f1f;
+.navbar-item-antd {
+  transition: all ease 0.2s;
+  &:hover {
+    color: #f47f1f !important;
+    transition: all ease 0.2s;
+  }
 }
 
-.ant-menu-submenu-title:hover {
-  .ant-menu-submenu-arrow::before,
-  .ant-menu-submenu-arrow::after {
-    background: red !important;
+.btn-login {
+  background-color: #f47f1f !important;
+  color: #fff;
+  border: "none";
+  &:hover {
+    opacity: 0.9;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
   }
+}
+
+.btn-register {
+  border: 1px solid #f47f1f;
+  color: #f47f1f;
 }

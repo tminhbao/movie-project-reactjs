@@ -1,58 +1,9 @@
 import React, { useState } from "react";
 import { Menu } from "antd";
 import "../../assets/sass/index.scss";
-import { CaretDownOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
-  const items = [
-    {
-      label: "Mua Vé",
-      key: "Mua Vé",
-      icon: <CaretDownOutlined />,
-    },
-    {
-      label: "Phim",
-      key: "Phim",
-      children: [
-        {
-          type: "group",
-          children: [
-            {
-              label: "Phim Đang Chiếu",
-              key: "setting:1",
-            },
-            {
-              label: "Phim Sắp Chiếu",
-              key: "setting:2",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      label: "Góc điện ảnh",
-      key: "Góc điện ảnh",
-      icon: <CaretDownOutlined />,
-    },
-    {
-      label: "Sự kiện",
-      key: "Sự kiện",
-      icon: <CaretDownOutlined />,
-    },
-    {
-      label: "Rạp/Giá vé",
-      key: "Rạp/Giá vé",
-    },
-    {
-      label: "Hỗ trợ",
-      key: "Hỗ trợ",
-    },
-    {
-      label: "Thành viên",
-      key: "Thành viên",
-    },
-  ];
-  const [current, setCurrent] = useState("mail");
+  const [current, setCurrent] = useState("");
   const onClick = (e) => {
     console.log("click ", e);
     setCurrent(e.key);
@@ -62,12 +13,43 @@ const Navbar = () => {
       onClick={onClick}
       selectedKeys={[current]}
       mode="horizontal"
-      items={items}
       className="mx-auto w-full text-white uppercase font-bold px-8"
       style={{
         backgroundColor: "#000",
       }}
-    />
+    >
+      <Menu.Item className="navbar-item-antd" style={{ margin: "0 30px" }}>
+        Mua Vé
+      </Menu.Item>
+      <Menu.SubMenu
+        title="Sự kiện"
+        className="navbar-item-antd"
+        style={{ margin: "0 30px" }}
+      >
+        <Menu.Item>Phim đang chiếu</Menu.Item>
+        <Menu.Item>Phim sắp chiếu</Menu.Item>
+      </Menu.SubMenu>
+      <Menu.Item className="navbar-item-antd" style={{ margin: "0 30px" }}>
+        Góc điện ảnh
+      </Menu.Item>
+      <Menu.SubMenu
+        title="Sự kiện"
+        className="navbar-item-antd"
+        style={{ margin: "0 30px" }}
+      >
+        <Menu.Item>Ưu đãi</Menu.Item>
+        <Menu.Item>Phim hay tháng</Menu.Item>
+      </Menu.SubMenu>
+      <Menu.Item className="navbar-item-antd" style={{ margin: "0 30px" }}>
+        Rạp/Giá Vé
+      </Menu.Item>
+      <Menu.Item className="navbar-item-antd" style={{ margin: "0 30px" }}>
+        Hỗ trợ
+      </Menu.Item>
+      <Menu.Item className="navbar-item-antd" style={{ margin: "0 30px" }}>
+        Thành viên
+      </Menu.Item>
+    </Menu>
   );
 };
 
