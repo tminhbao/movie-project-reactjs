@@ -1,5 +1,6 @@
 import { Tabs } from "antd";
 import React from "react";
+import CardMovie from "../CardMovie/CardMovie";
 
 const TabMovie = () => {
   const onChange = (key) => {
@@ -9,12 +10,30 @@ const TabMovie = () => {
     {
       key: "1",
       label: `Phim đang chiếu`,
-      children: <p>Movie Card</p>,
+      children: (
+        <div
+          className="flex items-center overflow-hidden h-60"
+          style={{ border: "1px solid red" }}
+        >
+          <div className="item-flex-antd mx-3 basis-1/4">
+            <CardMovie />
+          </div>
+          <div className="item-flex-antd mx-3 basis-1/4">
+            <CardMovie />
+          </div>
+          <div className="item-flex-antd mx-3 basis-1/4">
+            <CardMovie />
+          </div>
+          <div className="item-flex-antd mx-3 basis-1/4">
+            <CardMovie />
+          </div>
+        </div>
+      ),
     },
     {
       key: "2",
       label: `Phim sắp chiếu`,
-      children: <p>Movie Card</p>,
+      children: <CardMovie />,
     },
   ];
   return (
@@ -23,13 +42,12 @@ const TabMovie = () => {
       items={items}
       onChange={onChange}
       style={{
-        color: "#fff",
-        backgroundColor: "#242729",
+        color: "#474a4f",
       }}
       tabBarStyle={{
-        color: "#fff",
+        color: "#474a4f",
       }}
-      className="px-5 h-full uppercase font-bold"
+      className="px-32 h-full uppercase font-bold bg-white w-full"
     />
   );
 };

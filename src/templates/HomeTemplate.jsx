@@ -1,6 +1,6 @@
 import { Layout, Input, Button } from "antd";
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import "../assets/sass/index.scss";
 const { Header, Content, Footer } = Layout;
@@ -35,8 +35,12 @@ const HomeTemplate = () => {
             />
           </div>
           <div className="user-wrapper">
-            <Button className="mx-1 btn-login">Đăng ký</Button>
-            <Button className="mx-1 btn-register">Đăng nhập</Button>
+            <Button className="mx-1 btn-login">
+              <NavLink to="/register">Đăng ký</NavLink>
+            </Button>
+            <Button className="mx-1 btn-register">
+              <NavLink to="/login">Đăng nhập</NavLink>
+            </Button>
           </div>
         </Header>
         <Navbar />

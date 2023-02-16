@@ -11,6 +11,8 @@ import Home from "./pages/Home/Home";
 import { Provider } from "react-redux";
 import { store } from "./redux/configStore";
 import HomeTemplate from "./templates/HomeTemplate";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 
 export const history = createBrowserHistory();
 
@@ -21,11 +23,9 @@ root.render(
       <Routes>
         <Route path="" element={<HomeTemplate />}>
           <Route path="" element={<Home />} />
-        </Route>
-        {/* <Route path="">
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-        </Route> */}
+        </Route>
       </Routes>
     </HistoryRouter>
   </Provider>

@@ -20,6 +20,7 @@
 
 .navbar-item-antd {
   transition: all ease 0.2s;
+  color: #fff;
   &:hover {
     color: #f47f1f !important;
     transition: all ease 0.2s;
@@ -40,4 +41,8 @@
 .btn-register {
   border: 1px solid #f47f1f;
   color: #f47f1f;
+}
+
+label {
+  font-size: 66px;
 }
