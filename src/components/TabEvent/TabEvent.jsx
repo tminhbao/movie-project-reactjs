@@ -1,8 +1,6 @@
-import { Button, Tabs } from "antd";
 import React from "react";
-import CardMovie from "../CardMovie/CardMovie";
 
-const TabMovie = () => {
+const TabEvent = () => {
   const onChange = (key) => {
     console.log(key);
   };
@@ -58,20 +56,7 @@ const TabMovie = () => {
       children: <CardMovie />,
     },
   ];
-  return (
-    <Tabs
-      defaultActiveKey="1"
-      items={items}
-      onChange={onChange}
-      style={{
-        color: "#474a4f",
-      }}
-      tabBarStyle={{
-        color: "#474a4f",
-      }}
-      className="px-32 h-full uppercase font-bold bg-white w-full"
-    />
-  );
+  return <div>TabEvent</div>;
 };
 
-export default TabMovie;
+export default TabEvent;
