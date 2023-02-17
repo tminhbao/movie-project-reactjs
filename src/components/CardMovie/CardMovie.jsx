@@ -42,6 +42,7 @@ const CardMovie = () => {
           Xem chi tiết
         </Button>,
       ]}
+      className="cursor-pointer"
     >
       <Meta
         avatar={
@@ -55,7 +56,7 @@ const CardMovie = () => {
         title={
           <Popover content={content}>
             <Typography.Text
-              className="truncate max-w"
+              className="truncate max-w cursor-pointer"
               style={{
                 width: "10px",
                 overflow: "hidden",
