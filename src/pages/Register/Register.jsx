@@ -4,7 +4,7 @@ import {
   PhoneOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-import { Button, Form, Input, Typography } from "antd";
+import { Button, Form, Input, Select, Typography } from "antd";
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -22,7 +22,7 @@ const Register = () => {
     >
       <Form
         name="normal_login"
-        className="login-form bg-white w-1/4 mx-auto p-8 rounded-md relative top-1/2 -translate-y-2/3"
+        className="login-form bg-white w-1/4 mx-auto p-8 rounded-md relative top-1/2 -translate-y-2/4"
         initialValues={{
           remember: true,
         }}
@@ -65,6 +65,23 @@ const Register = () => {
           <Input
             prefix={<PhoneOutlined className="site-form-item-icon" />}
             placeholder="Số điện thoại"
+          />
+        </Form.Item>
+        <Form.Item name="accountType" className="w-full">
+          <Select
+            defaultValue="Người dùng"
+            options={[
+              {
+                value: "Người dùng",
+                label: "Người dùng",
+              },
+              {
+                value: "Quản trị viên",
+                label: "Quản trị viên",
+              },
+            ]}
+            placeholder="Chọn loại tài khoản"
+            className="w-full"
           />
         </Form.Item>
         <Form.Item className="text-center">

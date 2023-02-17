@@ -13,6 +13,8 @@ import { store } from "./redux/configStore";
 import HomeTemplate from "./templates/HomeTemplate";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import MovieDetail from "./components/MovieDetail/MovieDetail";
+import Profile from "./pages/Profile/Profile";
 
 export const history = createBrowserHistory();
 
@@ -25,6 +27,8 @@ root.render(
           <Route path="" element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="movie/moviedetail/:idMovie" element={<MovieDetail />} />
         </Route>
       </Routes>
     </HistoryRouter>

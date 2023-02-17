@@ -1,6 +1,5 @@
 import React from "react";
 import { Avatar, Button, Card, Popover, Typography } from "antd";
-import "../../assets/sass/CardMovie/CardMovie.scss";
 const { Meta } = Card;
 
 const CardMovie = () => {
