@@ -11,10 +11,7 @@ const TabMovie = () => {
       key: "1",
       label: `Phim đang chiếu`,
       children: (
-        <div
-          className="flex items-center overflow-hidden h-60"
-          style={{ border: "1px solid red" }}
-        >
+        <div className="flex items-center overflow-hidden h-full">
           <div className="item-flex-antd mx-3 basis-1/4">
             <CardMovie />
           </div>

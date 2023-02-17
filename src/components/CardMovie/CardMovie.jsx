@@ -1,26 +1,76 @@
-import { Card } from "antd";
 import React from "react";
+import { Avatar, Button, Card, Popover, Typography } from "antd";
+import "../../assets/sass/CardMovie/CardMovie.scss";
+const { Meta } = Card;
 
 const CardMovie = () => {
+  const content = (
+    <Typography.Text
+      className="truncate max-w"
+      style={{
+        width: "10px",
+        overflow: "hidden",
+        textOverflow: "ellipsis",
+        whiteSpace: "nowrap",
+      }}
+    >
+      NGƯỜI KIẾN VÀ CHIẾN BINH ONG: THẾ GIỚI LƯỢNG TỬ
+    </Typography.Text>
+  );
   return (
     <Card
-      hoverable
-      //   cover={
-      //     <img
-      //       alt="example"
-      //       src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-      //       className="w-1 object-contain"
-      //     />
-      //   }
-      className="w-full h-5/6 overflow-hidden"
-      style={{ border: "1px solid blue" }}
+      style={{
+        color: "#fff",
+        maxWidth: "280px",
+      }}
+      cover={
+        <img
+          alt="example"
+          src="https://media.lottecinemavn.com/Media/MovieFile/MovieImg/202302/10773_103_100004.jpg"
+        />
+      }
+      actions={[
+        <Button
+          className="bg-primary w-3/4 mx-2 py-1"
+          style={{ color: "#fff" }}
+        >
+          Đặt vé
+        </Button>,
+        <Button
+          className="bg-primary w-3/4 mx-2 py-1"
+          style={{ color: "#fff" }}
+        >
+          Xem chi tiết
+        </Button>,
+      ]}
     >
-      <img
-        src="https://cdn.galaxycine.vn/media/2023/2/7/1350x900-_1675764335601.jpg"
-        className="h-20"
+      <Meta
+        avatar={
+          <Avatar
+            style={{ backgroundColor: "#fb4226", color: "white" }}
+            className="px-2"
+          >
+            C18
+          </Avatar>
+        }
+        title={
+          <Popover content={content}>
+            <Typography.Text
+              className="truncate max-w"
+              style={{
+                width: "10px",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
+              NGƯỜI KIẾN VÀ CHIẾN BINH ONG: THẾ GIỚI LƯỢNG TỬ
+            </Typography.Text>
+          </Popover>
+        }
+        //description="This is the description"
+        className="flex items-center overflow-hidden"
       />
-      {/* <Card.Meta title="Nhà bà nữ" description="www.instagram.com" /> */}
-      <Card.Meta title="Nhà bà nữ" />
     </Card>
   );
 };

@@ -19,13 +19,13 @@ const HomeTemplate = () => {
             justifyContent: "space-between",
           }}
         >
-          <div className="logo-img bg-white">
+          <NavLink to="/" className="logo-img bg-white cursor-pointer">
             <img
               src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
               alt="logo-img"
               className="w-56"
             />
-          </div>
+          </NavLink>
           <div className="search-wrapper h-full relative w-1/4">
             <Input.Search
               placeholder="Tìm tên phim, diễn viên..."
