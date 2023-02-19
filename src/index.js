@@ -28,7 +28,9 @@ root.render(
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="profile" element={<Profile />} />
-          <Route path="movie/moviedetail/:idMovie" element={<MovieDetail />} />
+          {/* Movie Route  */}
+          <Route path="movie/moviedetail/:movieId" element={<MovieDetail />} />
+          {/* <Route path="movie/purchase/:movieId" element={<Purchase />} /> */}
         </Route>
       </Routes>
     </HistoryRouter>
