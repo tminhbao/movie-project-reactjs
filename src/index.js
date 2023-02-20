@@ -15,6 +15,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import MovieDetail from "./components/MovieDetail/MovieDetail";
 import Profile from "./pages/Profile/Profile";
+import BookingTicket from "./pages/BookingTicket/BookingTicket";
 
 export const history = createBrowserHistory();
 
@@ -30,7 +31,7 @@ root.render(
           <Route path="profile" element={<Profile />} />
           {/* Movie Route  */}
           <Route path="movie/moviedetail/:movieId" element={<MovieDetail />} />
-          {/* <Route path="movie/purchase/:movieId" element={<Purchase />} /> */}
+          <Route path="movie/purchase/:movieId" element={<BookingTicket />} />
         </Route>
       </Routes>
     </HistoryRouter>

@@ -1,4 +1,5 @@
-import { Layout, Input, Button } from "antd";
+import { Layout, Input, Button, Dropdown, Space, Typography } from "antd";
+import { DownOutlined, SmileOutlined } from "@ant-design/icons";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
@@ -7,6 +8,16 @@ const { Header, Content, Footer } = Layout;
 
 const HomeTemplate = () => {
   const onSearch = (value) => console.log(value);
+  const items = [
+    {
+      key: "1",
+      label: <NavLink to="/dangchieu">Phim đang chiếu</NavLink>,
+    },
+    {
+      key: "2",
+      label: <NavLink to="/sapchieu">Phim sắp chiếu</NavLink>,
+    },
+  ];
   return (
     <>
       <Layout className="layout">
@@ -19,13 +30,22 @@ const HomeTemplate = () => {
             justifyContent: "space-between",
           }}
         >
-          <NavLink to="/" className="logo-img bg-white cursor-pointer">
-            <img
-              src="https://www.galaxycine.vn/website/images/galaxy-logo.png"
-              alt="logo-img"
-              className="w-56"
-            />
-          </NavLink>
+          <div className="navigation">
+            <NavLink to="/" className="mx-3">
+              Lịch chiếu
+            </NavLink>
+            <Dropdown
+              menu={{
+                items,
+              }}
+              placement="bottomLeft"
+              className="cursor-pointer mx-3"
+            >
+              <Typography.Text>Phim</Typography.Text>
+            </Dropdown>
+            <Typography.Text className="mx-3">Rạp</Typography.Text>
+          </div>
+
           <div className="search-wrapper h-full relative w-1/4">
             <Input.Search
               placeholder="Tìm tên phim, diễn viên..."

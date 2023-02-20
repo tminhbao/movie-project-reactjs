@@ -52,18 +52,22 @@ const MovieDetail = () => {
                 <p>Việt Nam</p>
               </Col>
             </Row>
-            <Row className="flex">
-              <LikeOutlined
-                className="text-5xl mr-2"
-                style={{ color: "blue" }}
-              />
-              <Button
-                className="bg-primary mt-5"
-                size="large"
-                style={{ color: "#fff" }}
-              >
-                Mua Vé
-              </Button>
+            <Row className="flex items-center">
+              <div className="basis-1/12">
+                <LikeOutlined
+                  className="text-4xl mr-2"
+                  style={{ color: "#0c4da2" }}
+                />
+              </div>
+              <div className="basis-11/12">
+                <Button
+                  className="bg-primary mt-5"
+                  size="large"
+                  style={{ color: "#fff" }}
+                >
+                  Mua Vé
+                </Button>
+              </div>
             </Row>
           </Col>
         </Row>
