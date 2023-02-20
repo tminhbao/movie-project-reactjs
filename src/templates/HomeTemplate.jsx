@@ -1,5 +1,4 @@
-import { Layout, Input, Button, Dropdown, Space, Typography } from "antd";
-import { DownOutlined, SmileOutlined } from "@ant-design/icons";
+import { Layout, Input, Button, Dropdown, Typography } from "antd";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
@@ -11,11 +10,11 @@ const HomeTemplate = () => {
   const items = [
     {
       key: "1",
-      label: <NavLink to="/dangchieu">Phim đang chiếu</NavLink>,
+      label: <NavLink to="movie/showing">Phim đang chiếu</NavLink>,
     },
     {
       key: "2",
-      label: <NavLink to="/sapchieu">Phim sắp chiếu</NavLink>,
+      label: <NavLink to="movie/upcoming">Phim sắp chiếu</NavLink>,
     },
   ];
   return (
@@ -30,6 +29,16 @@ const HomeTemplate = () => {
             justifyContent: "space-between",
           }}
         >
+          <div className="logo-img">
+            <NavLink to="/">
+              <img
+                src="https://moveek.com/bundles/ornweb/img/logo.png"
+                alt=""
+                className="w-1/3 cursor-pointer"
+              />
+            </NavLink>
+          </div>
+
           <div className="navigation">
             <NavLink to="/" className="mx-3">
               Lịch chiếu
@@ -43,17 +52,21 @@ const HomeTemplate = () => {
             >
               <Typography.Text>Phim</Typography.Text>
             </Dropdown>
-            <Typography.Text className="mx-3">Rạp</Typography.Text>
+            <Typography.Text className="mx-3 cursor-pointer">
+              Rạp
+            </Typography.Text>
           </div>
 
-          <div className="search-wrapper h-full relative w-1/4">
+          <div className="search-wrapper h-full relative w-1/4 ">
             <Input.Search
               placeholder="Tìm tên phim, diễn viên..."
               allowClear
               onSearch={onSearch}
               className="absolute top-1/2 -translate-y-1/2 w-full"
+              size="large"
             />
           </div>
+
           <div className="user-wrapper">
             <Button className="mx-1 btn-login">
               <NavLink to="/register">Đăng ký</NavLink>
