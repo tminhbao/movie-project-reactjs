@@ -1,17 +1,13 @@
+import { Typography } from "antd";
 import React from "react";
-import Banner from "../../components/Banner/Banner";
-import MovieSchedule from "../../components/MovieSchedule/MovieSchedule";
-import TabEvent from "../../components/TabEvent/TabEvent";
-import TabMovie from "../../components/TabMovie/TabMovie";
 
 const Home = () => {
   return (
-    <>
-      <Banner />
-      <TabMovie />
-      <TabEvent />
-      <MovieSchedule />
-    </>
+    <React.Fragment>
+      <Typography.Title className="text-center block my-4">
+        Mua vé theo phim
+      </Typography.Title>
+    </React.Fragment>
   );
 };
 
