@@ -1,6 +1,7 @@
 import { Col, Row } from "antd";
 import React from "react";
 import { NavLink } from "react-router-dom";
+import MovieSchedule from "../../../components/Movie/MovieSchedule/MovieSchedule";
 
 const TheaterDetail = () => {
   return (
@@ -45,6 +46,9 @@ const TheaterDetail = () => {
             Star 3/2 luôn có giá vé rất cạnh tranh.
           </p>
         </Col>
+      </Row>
+      <Row className="mt-6">
+        <MovieSchedule />
       </Row>
     </React.Fragment>
   );
