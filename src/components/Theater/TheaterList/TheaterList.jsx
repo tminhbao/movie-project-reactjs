@@ -1,4 +1,4 @@
-import { Col, Divider, Row } from "antd";
+import { Divider } from "antd";
 import { Collapse } from "antd";
 
 import React from "react";
@@ -10,23 +10,6 @@ const TheaterList = () => {
     console.log(key);
   };
   return (
-    // <Row className="px-32 py-8">
-    //   <Col span={24}>
-    //     <TheaterCard />
-    //   </Col>
-    //   <Col span={24}>
-    //     <TheaterCard />
-    //   </Col>
-    //   <Col span={24}>
-    //     <TheaterCard />
-    //   </Col>
-    //   <Col span={24}>
-    //     <TheaterCard />
-    //   </Col>
-    //   <Col span={24}>
-    //     <TheaterCard />
-    //   </Col>
-    // </Row>
     <Collapse
       defaultActiveKey={["1"]}
       onChange={onChange}
