@@ -1,4 +1,4 @@
-# Movie Booking Ticket - Project with API of (Cybesoft Edu)[https://cybersoft.edu.vn/]
+# Movie Booking Ticket - Project with API of [Cybesoft Edu](https://cybersoft.edu.vn/)
 
 ## Available Scripts
 
