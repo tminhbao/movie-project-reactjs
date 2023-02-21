@@ -1,4 +1,4 @@
-import { Button, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 import React from "react";
 import MovieCard from "../../components/Movie/MovieCard/MovieCard";
 
@@ -9,26 +9,35 @@ const Home = () => {
         Mua vé theo phim
       </Typography.Title>
 
-      <div className="movie-banner flex flex-wrap px-32">
-        <div className="basis-1/5 p-2">
+      <Row className="px-6" gutter={(10, 10)}>
+        <Col span={3}>
           <MovieCard />
-        </div>
-        <div className="basis-1/5 p-2">
+        </Col>
+        <Col span={3}>
           <MovieCard />
-        </div>
-        <div className="basis-1/5 p-2">
+        </Col>
+        <Col span={3}>
           <MovieCard />
-        </div>
-        <div className="basis-1/5 p-2">
+        </Col>
+        <Col span={3}>
           <MovieCard />
-        </div>
-        <div className="basis-1/5 p-2">
+        </Col>
+        <Col span={3}>
           <MovieCard />
-        </div>
+        </Col>
+        <Col span={3}>
+          <MovieCard />
+        </Col>
+        <Col span={3}>
+          <MovieCard />
+        </Col>
+        <Col span={3}>
+          <MovieCard />
+        </Col>
         <Button className="mx-auto text-primary px-9 border-primary my-6 uppercase font-bold">
           Load more
         </Button>
-      </div>
+      </Row>
 
       <Typography.Title className="text-center block my-4">
         Mua vé theo rạp

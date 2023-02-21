@@ -1,7 +1,6 @@
 import { Layout, Input, Button, Dropdown, Typography } from "antd";
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar/Navbar";
 import "../assets/sass/index.scss";
 const { Header, Content, Footer } = Layout;
 
@@ -40,7 +39,7 @@ const HomeTemplate = () => {
           </div>
 
           <div className="navigation">
-            <NavLink to="/" className="mx-3">
+            <NavLink to="/schedule" className="mx-3">
               Lịch chiếu
             </NavLink>
             <Dropdown
@@ -52,9 +51,9 @@ const HomeTemplate = () => {
             >
               <Typography.Text>Phim</Typography.Text>
             </Dropdown>
-            <Typography.Text className="mx-3 cursor-pointer">
+            <NavLink to="/theater" className="mx-3">
               Rạp
-            </Typography.Text>
+            </NavLink>
           </div>
 
           <div className="search-wrapper h-full relative w-1/4 ">
@@ -76,7 +75,6 @@ const HomeTemplate = () => {
             </Button>
           </div>
         </Header>
-        <Navbar />
         <Content>
           <Outlet />
         </Content>

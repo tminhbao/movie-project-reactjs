@@ -8,7 +8,6 @@ const MovieCard = () => {
     <Typography.Text
       className="truncate max-w"
       style={{
-        width: "10px",
         overflow: "hidden",
         textOverflow: "ellipsis",
         whiteSpace: "nowrap",
@@ -40,7 +39,7 @@ const MovieCard = () => {
           Đặt vé
         </Button>,
       ]}
-      className="cursor-pointer w-52"
+      className="cursor-pointer"
     >
       <Meta
         title={
@@ -60,8 +59,8 @@ const MovieCard = () => {
         }
         description={
           <Row>
-            <Col span={16}>17/02</Col>
-            <Col span={8} className="flex">
+            <Col span={12}>17/02</Col>
+            <Col span={12} className="flex">
               <span className="mr-1">
                 <LikeOutlined />
               </span>
