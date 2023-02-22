@@ -20,6 +20,6 @@ You may also see any lint errors in the console.
 - Home
 - Theater 
 - Theater Detail
-
+- Movie Detail
 
 
