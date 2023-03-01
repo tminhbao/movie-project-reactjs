@@ -19,6 +19,7 @@ import UpcomingMovies from "./pages/Movie/UpcomingMovies/UpcomingMovies";
 import MovieDetail from "./pages/Movie/MovieDetail/MovieDetail";
 import Theater from "./pages/Theater/Theater";
 import TheaterDetail from "./pages/Theater/TheaterDetail/TheaterDetail";
+import MovieSchedule from "./pages/Movie/MovieSchedule/MovieSchedule";
 
 export const history = createBrowserHistory();
 
@@ -36,6 +37,11 @@ root.render(
           <Route path="movie/showing" element={<ShowingMovies />} />
           <Route path="movie/upcoming" element={<UpcomingMovies />} />
           <Route path="movie/moviedetail/:movieId" element={<MovieDetail />} />
+          <Route path="movie/movieschedule" element={<MovieSchedule />} />
+          <Route
+            path="movie/movieschedule/:movieId"
+            element={<MovieSchedule />}
+          />
           {/* Theater Route   */}
           <Route path="theater" element={<Theater />} />
           <Route path="theater/:theaterId" element={<TheaterDetail />} />

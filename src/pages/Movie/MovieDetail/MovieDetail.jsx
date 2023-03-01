@@ -1,5 +1,6 @@
-import { Col, Row, Tabs } from "antd";
+import { Row, Tabs } from "antd";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import MovieInfo from "../../../components/Movie/MovieInfo/MovieInfo";
 
 const MovieDetail = () => {
@@ -24,7 +25,7 @@ const MovieDetail = () => {
     },
     {
       key: "2",
-      label: `Lịch chiếu`,
+      label: <NavLink to="movie/movieschedule/1">Lịch chiếu</NavLink>,
       children: `Content of Tab Pane 2`,
     },
     {
